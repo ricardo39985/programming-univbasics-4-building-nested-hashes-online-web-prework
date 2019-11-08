@@ -33,8 +33,12 @@ def monopoly_with_fourth_tier
   # complexity.
   monopoly = monopoly_with_third_tier
 
-	monopoly_with_fourth_tier[:railroads][:names].each_key|:mortgage_value|
-	mortgage_value: "$#{100}"
+	monopoly_with_fourth_tier[:railroads][:names].each do|:mortgage_value|
+	monopoly_with_fourth_tier[:railroads][:names][:reading_railroad][:mortgage_value] = "$#{100}"
+	monopoly_with_fourth_tier[:railroads][:names][:pennsylvania_railroad][:mortgage_value] = "$#{100}"
+	monopoly_with_fourth_tier[:railroads][:names][:b_and_o_railroad][:mortgage_value] = "$#{100}"
+	monopoly_with_fourth_tier[:railroads][:names][:shortline_railroad][:mortgage_value] = "$#{100}"
+	monopoly
 end
 
 end
